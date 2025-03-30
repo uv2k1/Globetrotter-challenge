@@ -1,3 +1,4 @@
+// import React, { useState, useEffect } from "react";
 import React, { useState, useEffect } from "react";
 import { Button, TextField, Typography } from "@mui/material";
 import { registerUser, getUserScore } from "../api.js";
@@ -102,6 +103,9 @@ function GameOver({ score, restartGame }) {
   const fetchQuestion = async () => {
     try {
       const response = await axios.get(`${process.env.VITE_BACKEND_URL}/api/questions`);
+      // const response = await axios.get(`https://globetrotter-challenge-1-tatn.onrender.com/api/questions`);
+      // const response = await axios.get(`http://localhost:5001/api/questions`);
+      
       console.log("Fetched Question:", response.data);
 
       const data = response.data;
