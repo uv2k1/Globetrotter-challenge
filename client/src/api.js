@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// const API_URL = "http://localhost:5001/api";
-const API_URL = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API_URL = "https://globetrotter-challenge-1-tatn.onrender.com/api";
 
 // Register or update a user with a score
 export const registerUser = async (username, score) => {
