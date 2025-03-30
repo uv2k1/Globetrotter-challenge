@@ -101,7 +101,7 @@ function GameOver({ score, restartGame }) {
 
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/questions");
+      const response = await axios.get(`${process.env.VITE_BACKEND_URL}/api/questions`);
       console.log("Fetched Question:", response.data);
 
       const data = response.data;
